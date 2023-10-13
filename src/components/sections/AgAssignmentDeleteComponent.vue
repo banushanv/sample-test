@@ -27,9 +27,9 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-white px-12 pb-2 pt-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6"
+              class="relative transform overflow-hidden rounded-lg bg-white px-12 pb-1 pt-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6"
             >
-              <div class=" py-6 border-b border-gray-200 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-0">
+              <div class=" py-2 border-b border-gray-200 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-0">
                     <dd class="font-semibold text-base leading-6  sm:col-span-4 sm:mt-0">
                     <span> {{ translate('tid_vikar.my_assignments_tab.delete_dialog.dialog_heading') }}</span> 
                     </dd>
@@ -154,7 +154,7 @@
                     </div>
                   </div>
                 </dt>
-                <div class="relative bottom-12 inset-x-0 bg-white p-3 flex justify-between gap-4">
+                <div class="relative bottom-16 inset-x-0 bg-white p-2 flex justify-between gap-4">
 
                   <button
                     type="button"

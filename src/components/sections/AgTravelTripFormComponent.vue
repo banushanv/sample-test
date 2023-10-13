@@ -42,7 +42,8 @@
               <div class="h-68-screen overflow-auto  position: relative  sm:h-full">
              
                 <div class="mt-2" >
-                    <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-6">
+                  <div class="px-4 py-4 sm:grid sm:grid-cols-1 sm:gap-4 sm:px-0">
+                      
                       <div class="col-span-full">
                         <label
                           for="street-address"
@@ -219,46 +220,6 @@
                           for="street-address"
                           class="block text-sm font-medium leading-6 text-gray-900"
                           >{{
-                            translate('tid_vikar.my_assignments_tab.travel_bill_dialog.tolls')
-                          }}</label
-                        >
-                        <div class="mt-1">
-                          <input
-                            type="text"
-                            name="tolls"
-                            id="tolls"
-                            v-model="tripModel.toll"
-                            autocomplete="tolls"
-                            class="block w-full rounded-md border-0 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-span-full">
-                        <label
-                          for="street-address"
-                          class="block text-sm font-medium leading-6 text-gray-900"
-                          >{{
-                            translate('tid_vikar.my_assignments_tab.travel_bill_dialog.tolls')
-                          }}</label
-                        >
-                        <div class="mt-1">
-                          <input
-                            type="text"
-                            name="tolls"
-                            id="tolls"
-                            v-model="tripModel.toll"
-                            autocomplete="tolls"
-                            class="block w-full rounded-md border-0 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
-
-                      <!-- <div class="col-span-full">
-                        <label
-                          for="street-address"
-                          class="block text-sm font-medium leading-6 text-gray-900"
-                          >{{
                             translate('tid_vikar.my_assignments_tab.travel_bill_dialog.add_bill')
                           }}
                         </label>
@@ -291,7 +252,7 @@
                             </template>
                           </upload>
                         </div>
-                      </div> -->
+                      </div>
                     </div>
                   </div>
               

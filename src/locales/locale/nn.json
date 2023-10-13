@@ -1,0 +1,64 @@
+
+{
+    "tid_vikar": {
+        "vikar": "TID VIKAR",
+        "user_name": "Brukarnamn",
+        "pin_code": "Pinkode",
+        "my_assignments":"My Assignments",
+        "assignments":"Assignments",
+        "available_assignments":"Tilgjengelige oppdrag",
+        "about_me":"About Me",
+        "my_assignments_tab":{
+            "show_details":"Vis detaljer",
+            "wedding":"Vielse",
+            "funeral":"Begravelse",
+            "religious":"Gudstjeneste",
+            "delete":"Slett",
+            "travel_bill":"Travel Bill",
+            "org":"Org",
+            "compensation":"Compensation",
+            "comment":"Kommentar",
+         "delete_dialog":{
+              "dialog_heading":"Do you want to delete this assignment",
+              "return_list.":"The deleted assignment will return to the list.",
+              "date":"Date",
+              "time":"Time",
+              "place":"Place",
+              "organization":"Organization",
+              "reason":"Reason",
+              "other_reason":"Other Reason"
+        
+            },
+            "travel_bill_dialog":{
+                "header":"Travel Bill",
+                "add_trip":"Add Trip",
+                "without_bill":"Done without a travel bill.",
+                "mode_travel":"Mode of travel",
+                "travel_from":"Travel From",
+                "travel_to":"Travel To",
+                "distance":"Distance(Km)",
+                "tolls":"Tolls/Ferry/Costs",
+                "add_bill":"Add Bill",
+                "add":"Lägg till",
+                "trip":"Trip"    
+            }
+    },
+        "available_assignments_tab":{
+            "takeGå tilbake_assignment":"Ta oppdrag",
+            "back":"Tilbake",
+            "go_back":"Gå tilbake",
+            "go_to_assignment":"Gå til mine oppdrag",
+            "already_taken_assignment":"Oops,This assignment was just taken by someone else",
+            "taken_assignment":"You have taken Assignment"
+          
+        },
+        "common":{
+            "ok":"OK",
+            "cancel":"Avbryt",
+            "submit":"Sende inn",
+            "update":"Oppdater",
+            "today":"I dag"
+
+        }
+    }
+}

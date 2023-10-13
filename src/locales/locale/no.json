@@ -1,0 +1,74 @@
+
+{
+    "tid_vikar": {
+        "vikar": "TID VIKAR",
+        "user_name": "Fødelsesnummer:",
+        "pin_code": "Pin-kode:",
+        "login": "Login",
+        "my_assignments":"Mine oppdrag",
+        "assignments":"Oppdrag",
+        "available_assignments":"Tilgjengelige oppdrag",
+        "about_me":"Mine info",
+        "my_assignments_tab":{
+            "show_details":"Vis detaljer",
+            "wedding":"Vielse",
+            "funeral":"Begravelse",
+            "religious":"Gudstjeneste",
+            "delete":"Slett",
+            "travel_bill":"Reiseregning",
+            "org":"Org",
+            "compensation":"Kompensasjon",
+            "comment":"Kommentar",
+            "delete_dialog":{
+                "dialog_heading":"Vil du slette dette oppdraget?",
+                "return_list":"Slett element vil bli flyttet tilbake til oppdraglisten",
+                "date":"Dato",
+                "time":"Klokkeslett",
+                "place":"Sted",
+                "organization":"Org.",
+                "reason":"Årsak",
+                "other_reason":"Annen"
+          
+              },
+              "travel_bill_dialog":{
+                "header":"Reiseregning",
+                "add_trip":"Legg til tur",
+                "without_bill":"Utført uten reiseregning",
+                "mode_travel":"Trafikkmåte",
+                "travel_from":"Reiser fra",
+                "travel_to":"Reiser til",
+                "distance":"Kjørelengde(Km)",
+                "tolls":"Bompenger",
+                "add_bill":"Legg til fil (pdf, png eller jpg)",
+                "add":"Lagre",
+                "trip":"Tur" 
+    
+    
+            },
+            "complete" :"Utført",
+            "travel_bill_missing": "Reiseregning mangler",        
+            "waiting_for_approval":"Venter på godkjenning",
+            "approved": "Godkjent",
+            "assignment_completed" :"Avsluttet"
+        },
+        "available_assignments_tab":{
+            "take_assignment":"Ta oppdrag",
+            "back":"Tilbake",
+            "go_back":"Gå tilbake",
+            "go_to_assignment":"Gå til mine oppdrag",
+            "already_taken_assignment":"Oops, dette oppdraget ble akkurat tatt av noen andre.",
+            "you_have_taken_assignment":"Du har tatt oppdraget",
+            "you_have_taken_assignment_message":"Dette oppdraget har blitt lagt til din liste"
+            
+          
+        },
+        "common":{
+            "ok":"OK",
+            "cancel":"Avbryt",
+            "today":"I dag",
+            "submit":"Send inn",
+            "update":"Oppdater"
+
+        }
+    }
+}

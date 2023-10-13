@@ -1,0 +1,74 @@
+
+{
+    "tid_vikar": {
+        "vikar": "TID VIKAR",
+        "user_name": "User Name",
+        "pin_code": "Pin Code",
+        "login": "Login",
+        "my_assignments":"My Assignments",
+        "assignments":"Assignments",
+        "available_assignments":"Available Assignments",
+        "about_me":"About Me",
+        "my_assignments_tab":{
+            "show_details":"Show Details",
+            "wedding":"Wedding",
+            "funeral":"Funeral",
+            "religious":"Religious",
+            "delete":"Delete",
+            "travel_bill":"Travel Bill",
+            "org":"Org",
+            "compensation":"Compensation",
+            "comment":"Comment",
+            "delete_dialog":{
+                "dialog_heading":"Do you want to delete this assignment",
+                "return_list":"The deleted assignment will return to the list.",
+                "date":"Date",
+                "time":"Time",
+                "place":"Place",
+                "organization":"Organization",
+                "reason":"Reason",
+                "other_reason":"Other Reason"
+          
+              },
+        "travel_bill_dialog":{
+            "header":"Travel Bill",
+            "add_trip":"Add Trip",
+            "without_bill":"Done without a travel bill.",
+            "mode_travel":"Mode of travel",
+            "travel_from":"Travel From",
+            "travel_to":"Travel To",
+            "distance":"Distance(Km)",
+            "tolls":"Tolls/Ferry/Costs",
+            "add_bill":"Add Bill",
+            "add":"Add",
+            "trip":"Trip"  
+
+
+        },
+        "complete" :"Complete",
+        "travel_bill_missing": "Travel bill missing",        
+        "waiting_for_approval":"Waiting for approval",
+        "approved": "Approved",
+        "assignment_completed" :"Completed"
+        
+        },
+        "available_assignments_tab":{
+            "take_assignment":"Take Assignment",
+            "back":"Back",
+            "go_back":"Go Back",
+            "go_to_assignment":"Go to my assignment",
+            "already_taken_assignment":"Oops,This assignment was just taken by someone else",
+            "you_have_taken_assignment":"You have taken Assignment",
+            "you_have_taken_assignment_message":"This assignment has been added to your list"
+          
+        },
+        "common":{
+            "ok":"OK",
+            "cancel":"Cancel",
+            "submit":"Submit",
+            "update":"Update",
+            "today":"Today"
+
+        }
+    }
+}

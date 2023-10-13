@@ -10,10 +10,10 @@
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div class="relative inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
       </TransitionChild>
 
-      <div class="fixed inset-0 z-10">
+      <div class="fixed inset-0 z-10 ">
         <div
           class="flex left-0 top-0 w-full items-end justify-center h-full  text-center sm:items-center sm:p-10"
         >
@@ -39,9 +39,9 @@
                 </dd>
               </div>
            
-              <form class="h-68-screen  overflow-auto sm:h-full">
+              <div class="h-68-screen overflow-auto  position: relative  sm:h-full">
              
-                <div class="mt-2">
+                <div class="mt-2" >
                     <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-6">
                       <div class="col-span-full">
                         <label
@@ -255,7 +255,7 @@
                     </div>
                   </div>
               
-                  <div class="relative bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
+                  <div class="fixed bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
                 <button
                     type="button"
                     class="flex w-full items-center justify-center gap-3 rounded-md bg-red-200 px-1 py-2 text-sm font-semibold text-dark-red-500 shadow-sm ring-1 ring-inset ring-dark-red-500 hover:bg-red-300"
@@ -279,7 +279,7 @@
            
                 </div>
             
-              </form>
+              </div>
            
 
          

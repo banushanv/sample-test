@@ -154,7 +154,7 @@
                     </div>
                   </div>
                 </dt>
-                <div class="fixed bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
+                <div class="relative bottom-12 inset-x-0 bg-white p-3 flex justify-between gap-4">
 
                   <button
                     type="button"

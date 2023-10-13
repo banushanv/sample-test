@@ -255,7 +255,7 @@
                     </div>
                   </div>
               
-                  <div class="fixed bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
+                  <div class="relative bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
                 <button
                     type="button"
                     class="flex w-full items-center justify-center gap-3 rounded-md bg-red-200 px-1 py-2 text-sm font-semibold text-dark-red-500 shadow-sm ring-1 ring-inset ring-dark-red-500 hover:bg-red-300"

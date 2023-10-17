@@ -76,6 +76,15 @@
                       <PlusIcon class="h-5 w-5" aria-hidden="true" />
                       {{ translate('tid_vikar.my_assignments_tab.travel_bill_dialog.add_trip') }}
                     </button>
+
+                    <button
+                      type="button"
+                      @click="onAddOutlayForm"
+                      class="inline-flex justify-center rounded-md w-1/2 bg-white px-2 py-2 text-center text-sm lg:max-xl:text-xs font-semibold text-red-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-100"
+                    >
+                      <PlusIcon class="h-5 w-5" aria-hidden="true" />
+                     Add Outlay
+                    </button>
                   </div>
 
                   <div class="px-4 py-4 sm:grid sm:grid-cols-1 sm:gap-4 sm:px-0">
@@ -198,6 +207,15 @@
     @on-cancel-trip-form="cancelTripForm()"
   >
   </AgTravelTripFormComponent>
+  <AgOutlayComponent
+    v-if="isOutlayFormVisible"
+    @on-add-trip-items="addTravelItems"
+    :isEdit="isEdit"
+    :selectedTripForm="selectedTripForm"
+    @on-cancel-trip-form="cancelOutlayForm()"
+  >
+  </AgOutlayComponent>
+
 </template>
 
 <script setup lang="ts">
@@ -205,11 +223,13 @@ import { computed, ref } from 'vue';
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue';
 import { PlusIcon } from '@heroicons/vue/20/solid';
 import AgTravelTripFormComponent from '@/components/sections/AgTravelTripFormComponent.vue';
+import AgOutlayComponent from '@/components/sections/AgOutlayComponent.vue';
 import type TripForm from '@/models/TripForm';
 import { translate } from "@/locales";
 
 const emit = defineEmits(['on-form-cancel-dialog']);
 const isTripFormVisible = ref(false);
+const isOutlayFormVisible = ref(false);
 const open = ref(true);
 const isEdit=ref(false);
 const tripDetails = ref([] as TripForm[]);
@@ -229,6 +249,12 @@ const onAddTripForm = () => {
   isEdit.value=false;
 };
 
+
+const onAddOutlayForm=()=>{
+  isOutlayFormVisible.value = true;
+  isEdit.value=false;
+};
+
 const onEditTripForm=(tripForm: TripForm)=>{
   isTripFormVisible.value = true;
   selectedTripForm.value=tripForm;
@@ -239,10 +265,15 @@ const onRemoveTripForm=(tripForm: TripForm)=>{
     const index=tripDetails.value.findIndex((a: TripForm)=>a.id===tripForm.id);
         if(index!==-1){
           tripDetails.value.splice(index,1);
-     }};
+     }
+    };
 
 const cancelTripForm = () => {
   isTripFormVisible.value = false;
+};
+
+const cancelOutlayForm = () => {
+  isOutlayFormVisible.value = false;
 };
 
 const addTravelItems = (travelItem: TripForm) => {

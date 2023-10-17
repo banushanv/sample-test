@@ -27,7 +27,7 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative overflow-hidden w-full h-full transform  rounded-lg bg-white px-4 pb-4 pt-20 text-left shadow-xl transition-all sm:mt-16 sm:w-full sm:h-auto sm:max-w-lg sm:p-6"
+              class="relative overflow-hidden w-full h-full transform  rounded-lg bg-white px-4 pb-4 pt-20 text-left shadow-xl transition-all sm:mt-16 sm:mb-2  sm:w-full  sm:max-w-lg sm:p-6"
             >
               <div
                 class="px-4 py-2 border-b border-gray-200 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-0"
@@ -39,11 +39,10 @@
                 </dd>
               </div>
            
-              <div class="h-68-screen overflow-auto  position: relative  sm:h-full">
+              <form class="h-68-screen overflow-auto ">
              
                 <div class="mt-2" >
-                  <div class="px-4 py-4 sm:grid sm:grid-cols-1 sm:gap-4 sm:px-0">
-                      
+                    <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-6">
                       <div class="col-span-full">
                         <label
                           for="street-address"
@@ -175,6 +174,17 @@
                         </div>
                       </div>
 
+                      <div class="relative flex items-start">
+                       
+                       <div class="flex h-6 items-center">
+                         <input id="comments" aria-describedby="comments-description"  v-model="tripModel.isTrip" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-dark-red-500 focus:ring-dark-red-500" />
+                       </div>
+                       <div class="ml-3 text-sm leading-6">
+                     <label for="comments" class="font-medium text-gray-900">Tur/Retur</label>
+                     
+                        </div>
+                     </div>
+
                       <div class="col-span-full">
                         <label
                           for="street-address"
@@ -215,49 +225,99 @@
                         </div>
                       </div>
 
+                      <div>
+                        <ul role="list" >
+                          <li
+                            v-for="passengerItem in tripModel.passengers"
+                            :key="passengerItem.id"
+                            class="flex items-center justify-between gap-x-4 py-2"
+                          >
+                          <div class="col-span-full">
+                        <label
+                          for="street-address"
+                          class="block text-sm font-medium leading-6 text-gray-900"
+                          >Passenger Name</label
+                        >
+                        <div class="mt-1">
+                          <input
+                            type="text"
+                            name="tolls"
+                            id="tolls"
+                            autocomplete="tolls"
+                            class="block w-72 rounded-md border-0 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
                       <div class="col-span-full">
                         <label
                           for="street-address"
                           class="block text-sm font-medium leading-6 text-gray-900"
-                          >{{
-                            translate('tid_vikar.my_assignments_tab.travel_bill_dialog.add_bill')
-                          }}
-                        </label>
-                        <div class="mb-12">
-                          <upload
-                            :batch="false"
-                            :multiple="true"
-                            :default-files="[]"
-                            :files="[]"
-                            :list="'myTemplate'"
-                            className="Upload"
-                            :disabled="false"
-                            :with-credentials="false"
-                          >
-                            <template v-slot:myTemplate="{ props }">
-                                    <SvgIcon
-                                      :icon="downloadIcon"
-                                      :size="'small'"
-                                      class="cursor-pointer mt-4"
-                                    />
-                                    <UploadListSingleItem
-                                      :files="props.files"
-                                      :async="props.async"
-                                      :disabled="props.disabled"
-                                      @cancel="props.onCancel"
-                                      @remove="props.onRemove"
-                                      @retry="props.onRetry"
-                                    >
-                                    </UploadListSingleItem>
-                            </template>
-                          </upload>
+                          >Km</label
+                        >
+                        <div class="mt-1">
+                          <input
+                            type="text"
+                            name="tolls"
+                            id="tolls"
+                            autocomplete="tolls"
+                            class="block w-24 rounded-md border-0 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
+                          />
                         </div>
                       </div>
+
+                         <div class="mt-6" @click="onRemovePassenger(passengerItem)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    stroke-width="1.5" 
+                                    stroke="currentColor" 
+                                    class="w-4 h-4 cursor-pointer">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 
+                                   2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 
+                                   013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                   </svg>
+                                  </div>
+                              </li>
+                              </ul>
+                              </div>
+
+                <div class="col-span-full">
+                  <div class="mt-4 flex w-64 ">
+                    <button
+                      type="button"
+                      @click="onAddPassengers()"
+                      class="inline-flex justify-center rounded-md w-3/5 bg-white px-2 py-2 text-center text-sm lg:max-xl:text-xs font-semibold text-red-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-100"
+                    >
+                      <PlusIcon class="h-5 w-5" aria-hidden="true" />
+                      Add Passengers
+                    </button>
+                  </div>
+                  
                     </div>
+
+                    <div class="col-span-full ">
+                        <label
+                          for="street-address"
+                          class="block text-sm font-medium leading-6 text-gray-900"
+                          >Sum (NOK)</label
+                        >
+                        <div class="mt-1">
+                          <input
+                            type="text"
+                            name="tolls"
+                            id="tolls"
+                            v-model="tripModel.sum"
+                            autocomplete="tolls"
+                            class="block w-full rounded-md border-0 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+                  </div>
                   </div>
               
                   <div class="fixed bottom-0 inset-x-0 bg-white p-4 flex justify-between gap-4">
-                <button
+                   <button
                     type="button"
                     class="flex w-full items-center justify-center gap-3 rounded-md bg-red-200 px-1 py-2 text-sm font-semibold text-dark-red-500 shadow-sm ring-1 ring-inset ring-dark-red-500 hover:bg-red-300"
                     @click="onCancelDialog()"
@@ -277,13 +337,8 @@
                         : translate('tid_vikar.my_assignments_tab.travel_bill_dialog.add')
                     }}
                   </button>
-           
-                </div>
-            
-              </div>
-           
-
-         
+                </div> 
+              </form>        
             </DialogPanel>
           </TransitionChild>
         </div>
@@ -300,18 +355,16 @@ import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headless
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid';
 import { v4 as uuidv4 } from 'uuid';
 import { useI18n } from 'vue-i18n';
-import type TripForm from '@/models/TripForm';
+import { PlusIcon } from '@heroicons/vue/20/solid';
+import TripForm from '@/models/TripForm';
 import { translate } from '@/locales';
 import { IntlProvider, load, loadMessages, LocalizationProvider } from '@progress/kendo-vue-intl';
 import weekData from 'cldr-core/supplemental/weekData.json';
 import norwegianCaGregorian from 'cldr-dates-full/main/nb/ca-gregorian.json';
 import swedishCaGregorian from 'cldr-dates-full/main/sv/ca-gregorian.json';
 import nbDateFields from 'cldr-dates-full/main/nb/dateFields.json';
-import { Upload } from '@progress/kendo-vue-upload';
-import { downloadIcon } from '@progress/kendo-svg-icons';
-import { SvgIcon } from '@progress/kendo-vue-common';
-import { UploadListSingleItem } from '@progress/kendo-vue-upload';
 import type { DatePickerChangeEvent } from 'node_modules/@progress/kendo-vue-dateinputs/dist/npm/datepicker/interfaces/DatePickerEventArguments';
+import Passenger from '@/models/Passenger';
 
 load(weekData, norwegianCaGregorian, swedishCaGregorian, nbDateFields);
 
@@ -328,7 +381,7 @@ const props = defineProps({
 
 const emit = defineEmits(['on-cancel-trip-form', 'on-add-trip-items']);
 const open = ref(true);
-const tripModel = ref({} as TripForm);
+const tripModel = ref( new TripForm() );
 const esMessages = { calendar: { today: translate('common.today') } };
 const { locale } = useI18n({ useScope: 'global' });
 const dateRef=ref(new Date());
@@ -347,6 +400,8 @@ const vehicleTypes = [
   { id: 5, name: 'Bike' }
 ];
 loadMessages(esMessages, locale.value);
+
+
 onMounted(() => {
   if (!props.isEdit) {
     tripModel.value.id = uuidv4();
@@ -384,6 +439,21 @@ const onConfirmTravelExpense = () => {
     tripModel.value.toll
   )
     emit('on-add-trip-items', tripModel.value);
+};
+
+const onAddPassengers=()=>{
+  const newPassenger= new Passenger();
+  newPassenger.distance="";
+  newPassenger.name="";
+  newPassenger.id=uuidv4();
+  tripModel.value.passengers.push(newPassenger);
+};
+
+const onRemovePassenger=(passenger: Passenger)=>{
+  const index=tripModel.value.passengers.findIndex((a: Passenger)=>a.id===passenger.id);
+        if(index!==-1){
+          tripModel.value.passengers.splice(index,1);
+     }
 };
 
 const  handleChange=(event: DatePickerChangeEvent)=> {

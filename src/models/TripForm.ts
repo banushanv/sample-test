@@ -1,3 +1,4 @@
+import type Passenger from "./Passenger";
 
 export default class TripForm{
     id!: string;
@@ -7,5 +8,8 @@ export default class TripForm{
     to !: string;
     distance!: string;
     toll!: string;
-    bill!: string;
+    sum!: string;
+    isTrip!: boolean;
+    passengers: Passenger[]=[];
+
 }
